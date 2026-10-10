@@ -1,0 +1,51 @@
+[
+    {
+        "UpdateStageName": "Script de lancement (lancer-lmp.sh)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/hydrocut/AMPTemplates-LunaMultiplayer/main/scripts/lancer-lmp.sh",
+        "UpdateSourceArgs": "lancer-lmp.sh",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Modele des reglages (AMP_reglages.txt)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/hydrocut/AMPTemplates-LunaMultiplayer/main/scripts/AMP_reglages.txt",
+        "UpdateSourceArgs": "AMP_reglages.txt",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Preparation du telechargement",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "\"{{$FullBaseDir}}lancer-lmp.sh\" preparer",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Telechargement du serveur Luna Multiplayer (releases GitHub)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/LunaMultiplayer/LunaMultiplayer/releases/download/{{VersionLMP}}/LunaMultiplayer-Server-linux-x64-Release.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}telechargement",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Installation dans serveur/ (Config et Universe gardes)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "\"{{$FullBaseDir}}lancer-lmp.sh\" installer",
+        "SkipOnFailure": false
+    }
+]

@@ -1,0 +1,238 @@
+[
+    {
+        "DisplayName": "Version de Luna Multiplayer",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Installation:download:1",
+        "Description": "Numéro exact d'une version publiée sur github.com/LunaMultiplayer/LunaMultiplayer/releases, téléchargée à chaque Update. Les joueurs doivent avoir le mod dans la même série (0.29.x avec 0.29.x) : sinon le serveur n'apparaît pas dans leur liste et la connexion échoue. 0.29.2 = version stable actuelle (mai 2026), celle que CKAN installe. Les versions « -Draft » sont des versions de développement que le nom ne fige pas : à éviter. Après un changement : Update, puis redémarrage. Univers et réglages sont gardés.",
+        "Keywords": "version,lmp,luna,mise a jour,update,release,ckan",
+        "FieldName": "VersionLMP",
+        "InputType": "text",
+        "ParamFieldName": "VersionLMP",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0.29.2",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Nom du serveur",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Serveur:dns:2",
+        "Description": "Affiché dans la liste des serveurs du jeu. 30 caractères au plus (au-delà, LMP coupe). Accents, guillemets, & < > passent tels quels.",
+        "Keywords": "nom,name,servername,serveur",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "ParamFieldName": "ServerName",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Serveur FR | TeamKit.fr",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Description",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Serveur:dns:2",
+        "Description": "Texte affiché sous le nom dans la liste des serveurs. 200 caractères au plus.",
+        "Keywords": "description,texte,liste",
+        "FieldName": "Description",
+        "InputType": "text",
+        "ParamFieldName": "Description",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Serveur francophone hébergé gratuitement par TeamKit.fr — Discord : discord.gg/EuAjGMYPHY",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Texte du lien",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Serveur:dns:2",
+        "Description": "Texte cliquable de la colonne « site » dans la liste des serveurs. 15 caractères au plus. Vide = pas de lien.",
+        "Keywords": "site,website,lien,discord",
+        "FieldName": "WebsiteText",
+        "InputType": "text",
+        "ParamFieldName": "WebsiteText",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Discord TeamKit",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Adresse du lien",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Serveur:dns:2",
+        "Description": "Adresse ouverte quand un joueur clique sur le texte du lien. Avec https:// devant. 60 caractères au plus.",
+        "Keywords": "site,website,url,discord",
+        "FieldName": "Website",
+        "InputType": "text",
+        "ParamFieldName": "Website",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "https://discord.gg/EuAjGMYPHY",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Message d'accueil",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Serveur:dns:2",
+        "Description": "Affiché 30 secondes en haut de l'écran de chaque joueur qui arrive. %Name% = son pseudo, %ServerName% = nom du serveur, %PlayerCount% = joueurs connectés, \\n = retour à la ligne. 255 caractères au plus. Vide = pas de message.",
+        "Keywords": "accueil,bienvenue,motd,message",
+        "FieldName": "ServerMotd",
+        "InputType": "text",
+        "ParamFieldName": "ServerMotd",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Salut %Name% ! Bienvenue sur le serveur Luna Multiplayer de TeamKit.fr.\\nJoueurs en ligne : %PlayerCount%. Discord : discord.gg/EuAjGMYPHY",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Message d'accueil aussi dans le chat",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Serveur:dns:2",
+        "Description": "Écrit aussi le message d'accueil dans le chat du joueur, où il reste lisible après les 30 secondes.",
+        "Keywords": "accueil,chat,motd",
+        "FieldName": "PrintMotdInChat",
+        "InputType": "checkbox",
+        "ParamFieldName": "PrintMotdInChat",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Apparaître dans la liste publique des serveurs",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Serveur:dns:2",
+        "Description": "Inscrit le serveur auprès des serveurs maîtres de LMP : il apparaît dans la liste des serveurs du jeu (bouton « Liste de serveurs » / Server List), avec le nom, la description, le mode et l'indication d'un mot de passe. Décoché, les joueurs se connectent en tapant IP et port à la main.",
+        "Keywords": "liste,master server,serveur maitre,public,browser",
+        "FieldName": "RegisterWithMasterServer",
+        "InputType": "checkbox",
+        "ParamFieldName": "RegisterWithMasterServer",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Mot de passe du serveur",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Accès:lock:3",
+        "Description": "Demandé à chaque joueur pour entrer. Vide = serveur ouvert à tous. 30 caractères au plus.",
+        "Keywords": "mot de passe,password,prive",
+        "FieldName": "Password",
+        "InputType": "password",
+        "ParamFieldName": "Password",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Mot de passe administrateur",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Accès:lock:3",
+        "Description": "Permet à un joueur d'administrer le serveur depuis KSP (fenêtre Admin de LMP : expulser, bannir, nettoyer les débris…). Vide = personne ; la console d'AMP reste administratrice dans tous les cas. 30 caractères au plus.",
+        "Keywords": "admin,administrateur,mot de passe,password",
+        "FieldName": "AdminPassword",
+        "InputType": "password",
+        "ParamFieldName": "AdminPassword",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Joueurs maximum",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Accès:lock:3",
+        "Description": "Au-delà, le joueur suivant reçoit « Server full ». 20 = défaut de LMP. Chaque joueur ajoute du trafic réseau (positions des vaisseaux 20 fois par seconde).",
+        "Keywords": "joueurs,max,maxplayers,places,slots",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "100",
+        "ParamFieldName": "MaxPlayers",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "20",
+        "Suffix": "joueurs",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Mode de jeu",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Partie:rocket_launch:4",
+        "Description": "À choisir AVANT la première partie. Au démarrage, LMP efface les fichiers des autres modes : passer de Carrière à Science ou Bac à sable supprime l'argent, la réputation et les contrats ; passer à Bac à sable supprime aussi l'arbre technologique. Revenir en arrière ne les rend pas.",
+        "Keywords": "mode,carriere,science,sandbox,bac a sable,career",
+        "FieldName": "GameMode",
+        "InputType": "enum",
+        "ParamFieldName": "GameMode",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Sandbox",
+        "EnumValues": {
+            "Sandbox": "Bac à sable (tout débloqué)",
+            "Science": "Science (arbre technologique, sans argent)",
+            "Career": "Carrière (argent, réputation, contrats)"
+        }
+    },
+    {
+        "DisplayName": "Difficulté",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Partie:rocket_launch:4",
+        "Description": "Préréglages de KSP, imposés à tous les joueurs. En Facile, KerbNet n'est pas disponible (note du wiki LMP). Personnalisée = les valeurs de serveur/Config/GameplaySettings.xml, à modifier à la main serveur arrêté.",
+        "Keywords": "difficulte,difficulty,facile,normal,difficile",
+        "FieldName": "GameDifficulty",
+        "InputType": "enum",
+        "ParamFieldName": "GameDifficulty",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Normal",
+        "EnumValues": {
+            "Easy": "Facile",
+            "Normal": "Normale",
+            "Moderate": "Modérée",
+            "Hard": "Difficile",
+            "Custom": "Personnalisée (GameplaySettings.xml)"
+        }
+    },
+    {
+        "DisplayName": "Accélération du temps",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Partie:rocket_launch:4",
+        "Description": "Subspace (défaut de LMP) : chaque joueur accélère le temps pour lui seul et se retrouve « dans le futur » ; les autres le rejoignent avec le bouton de synchronisation. Aucune : personne ne peut accélérer le temps.",
+        "Keywords": "warp,temps,acceleration,subspace,timewarp",
+        "FieldName": "WarpMode",
+        "InputType": "enum",
+        "ParamFieldName": "WarpMode",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Subspace",
+        "EnumValues": {
+            "Subspace": "Subspace : chacun son temps, synchronisation à la demande",
+            "None": "Aucune accélération"
+        }
+    },
+    {
+        "DisplayName": "Contrôle des mods",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Mods et triche:extension:5",
+        "Description": "Applique serveur/Config/LMPModControl.xml : pièces autorisées, mods obligatoires ou interdits. Le fichier par défaut n'autorise que les pièces du jeu de base : un vaisseau avec des pièces de mods est renvoyé au centre spatial. Pour jouer avec des mods, génère le fichier dans KSP (options de LMP, « Generate a server LMPModControl.xml ») et dépose-le dans serveur/Config/ (voir le README). Décoché : aucun contrôle, mais un joueur ne voit pas les vaisseaux faits de pièces qu'il n'a pas.",
+        "Keywords": "mods,modcontrol,pieces,parts,ckan,LMPModControl",
+        "FieldName": "ModControl",
+        "InputType": "checkbox",
+        "ParamFieldName": "ModControl",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Triche autorisée",
+        "Category": "Luna Multiplayer:public",
+        "Subcategory": "Mods et triche:extension:5",
+        "Description": "Menu de triche de KSP (Alt+F12 : carburant infini, téléportation…) pour tous les joueurs. Affiché dans la liste des serveurs. Activée par défaut dans LMP.",
+        "Keywords": "triche,cheats,alt f12",
+        "FieldName": "Cheats",
+        "InputType": "checkbox",
+        "ParamFieldName": "Cheats",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    }
+]

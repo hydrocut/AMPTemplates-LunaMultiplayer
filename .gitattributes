@@ -1,0 +1,3 @@
+# Le lanceur et le modele des reglages sont lus par bash et perl dans le conteneur : toujours en LF.
+*.sh text eol=lf
+*.txt text eol=lf

@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 8800,
+        "Ref": "ServerPort",
+        "Name": "Port du jeu",
+        "Description": "Seul port a ouvrir, en UDP. 8800 est le port par defaut de Luna Multiplayer : il sert a la connexion directe (IP:port) comme a la liste publique des serveurs."
+    }
+]

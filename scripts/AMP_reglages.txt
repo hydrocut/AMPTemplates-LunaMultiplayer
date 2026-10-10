@@ -1,0 +1,20 @@
+# reglages-amp.txt - ECRIT PAR AMP a chaque demarrage, a partir de AMP_reglages.txt.
+# Ne le modifie pas a la main : change les reglages dans l'onglet Configuration d'AMP.
+# Au demarrage, lancer-lmp.sh recopie chaque valeur dans serveur/Config/*.xml
+# (une cle = un element XML du meme nom), en echappant & < et >.
+# Format : CLE=valeur, la valeur va jusqu'a la fin de la ligne, telle quelle.
+ServerName={{ServerName}}
+Description={{Description}}
+WebsiteText={{WebsiteText}}
+Website={{Website}}
+ServerMotd={{ServerMotd}}
+PrintMotdInChat={{PrintMotdInChat}}
+Password={{Password}}
+AdminPassword={{AdminPassword}}
+MaxPlayers={{MaxPlayers}}
+GameMode={{GameMode}}
+GameDifficulty={{GameDifficulty}}
+WarpMode={{WarpMode}}
+Cheats={{Cheats}}
+ModControl={{ModControl}}
+RegisterWithMasterServer={{RegisterWithMasterServer}}
