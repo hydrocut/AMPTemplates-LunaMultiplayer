@@ -137,6 +137,10 @@ $valeurs{ConnectionSettings}{Port} = $port;            # le port attribue par AM
 $valeurs{ConnectionSettings}{Upnp} = "false";          # pas de box a ouvrir : 5 s perdues a chaque demarrage
 $valeurs{WebsiteSettings}{EnableWebsite} = "false";    # page JSON sur 8900/tcp : port non ouvert par AMP
 $valeurs{LogSettings}{LogLevel} = "Debug";             # la ligne de depart d un joueur est au niveau Debug
+# Qualite du terrain : LMP impose la meme chez tous les joueurs, et met High par defaut ; un KSP neuf est en Default,
+# donc chaque nouveau joueur etait deconnecte (vu le 11/10/2026). Default sur un univers NEUF seulement : un choix
+# fait a la main dans GeneralSettings.xml n est jamais ecrase.
+$valeurs{GeneralSettings}{TerrainQuality} = "Default" unless -e "$dossier/GeneralSettings.xml";
 for my $nom (sort keys %valeurs) {
   my $chemin = "$dossier/$nom.xml";
   my $racine = "${nom}Definition";
